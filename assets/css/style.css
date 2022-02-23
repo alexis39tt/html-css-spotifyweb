@@ -27,7 +27,8 @@ body{
     width: 300px;
     background-color: black;
     height: calc(100vh - 80px);
-    overflow-y: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .sidebar .logo{
@@ -120,12 +121,12 @@ body{
 
 .bottom-container{
     width: 300px;
+    padding: 10px 20px;
+    margin: 0;
     position: absolute;
     bottom: 80px;
-    padding: 0px 20px 10px;
     background-color: black;
 }
-
 
 .install-app p{
     display: inline-block;
@@ -185,7 +186,6 @@ header button{
     cursor: pointer;
     transition: color 0.2s, background-color 0.2s;
 }
-
 
 /* MAIN */
 
@@ -297,7 +297,7 @@ footer{
     .sidebar .logo img{
         margin: 0 auto;
     }
-    .sidebar .logo-big, .sidebar .nav-item p, .sidebar h3, .install-app p{
+    .sidebar .logo-big, .sidebar .nav-item p, .sidebar h3, .install-app p, .sidebar hr{
         display: none;
     }
     .sidebar .logo-small{
@@ -305,6 +305,8 @@ footer{
     }   
     .sidebar .nav-item{
         padding: 0;
+    }
+    .sidebar .nav-item, .install-app, .account{
         display: flex;
         justify-content: center;
     }
@@ -312,15 +314,17 @@ footer{
         display: none;
     }
     .bottom-container{
-        padding: 0;
+        padding: 10px 0px;
     }
     .install-app{
         width: 50px;
-        display: flex;
-        justify-content: center;
+        margin-bottom: 5px;
     }
     .install-app img{
         margin: 0 auto;
+    }
+    .account{
+        margin-top: 5px;
     }
     header{
         width: calc(100% - 50px);
