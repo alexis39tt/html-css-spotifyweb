@@ -26,12 +26,16 @@ body{
 .sidebar{
     width: 300px;
     background-color: black;
-    height: 100vh;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
 }
 
 .sidebar .logo{
     width: 100%;
     height: 80px;
+    position: sticky;
+    top: 0;
+    background-color: black;
 }
 
 .sidebar .logo img{
@@ -71,11 +75,97 @@ body{
     font-weight: 600;
 }
 
+.playlist-container{
+    padding: 0px 20px;
+    margin: 30px 0px;
+    color: #a3a3a3;
+}
+
+.playlist-container h3{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.create-playlist{
+    padding: 15px 0px;
+    cursor: pointer;
+}
+
+.create-playlist i{
+    font-size: 2rem;
+    padding: 7px;
+    color: black;
+    background-color: #a3a3a3;
+    vertical-align: middle;
+    transition: background-color 0.2s;
+}
+
+.create-playlist p{
+    margin-left: 10px;
+    font-weight: 600;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.playlist-list ul{
+    list-style: none;
+}
+
+.playlist-list li{
+    padding: 10px 0px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.bottom-container{
+    width: 300px;
+    position: absolute;
+    bottom: 80px;
+    padding: 0px 20px 10px;
+    background-color: black;
+}
+
+
+.install-app p{
+    display: inline-block;
+    color: #a3a3a3;
+    padding-left: 10px;
+    transition: color 0.2s;
+}
+
+.install-app img{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.bottom-container hr{
+    border: none;
+    border-top: 1px solid #a3a3a3;
+    margin: 10px 0px;
+}
+
+.account img{
+    width: 30px;
+    height: 30px;
+    background-color: #a3a3a3;
+    border-radius: 100%;
+    vertical-align: middle;
+}
+
+.account h3{
+    display: inline-block;
+    color: white;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
 /* HEADER */
 
 header{
     background-color: #080b12;
-    width: calc(100%  - 300px);
+    width: calc(100% - 300px);
     height: 80px;
     display: flex;
     justify-content: flex-end;
@@ -93,6 +183,7 @@ header button{
     margin: auto 0;
     padding: 12px 35px;
     cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
 }
 
 
@@ -110,29 +201,56 @@ footer{
     background-color: #282828;
 }
 
+/* MEDIA QUERIES */
+
+/* desktop */
+
 @media screen and (min-width: 769px){
     .sidebar .logo-small{
         display: none;
     }
+    .sidebar .nav-item p{
+        transition: color 0.2s;
+    }
     .sidebar .nav-item:hover p{
         color: white;
-        transition: 0.2s;
+        transition: color 0.2s;
     }
-    .sidebar .nav-item p{
-        transition: 0.2s;
+    .create-playlist:hover{
+        color: white;
+        transition: color 0.2s;
+    }
+    .create-playlist:hover i{
+        background-color: white;
+        transition: background-color 0.2s;
+    }
+    .create-playlist:hover p{
+        transition: color 0s;
+    }
+    .playlist-list li:hover{
+        color: white;
+    }
+    .bottom-container:hover{
+        cursor: pointer;
+    }
+    .install-app p:hover{
+        color: white;
+        transition: color 0.2s;
     }
     header button{
-        transition: 0.2s;
+        transition: color 0.2s, background-color 0.2s;
     }
     header button:hover{
         color: black;
         background-color: white;
-        transition: 0.2s;
+        transition: color 0.2s, background-color 0.2s;
     }
 }
 
+/* tablet */
+
 @media screen and (max-width: 768px) {
-    .sidebar{
+    .sidebar, .bottom-container{
         width: 200px;
     }
     .sidebar .logo-small{
@@ -149,19 +267,37 @@ footer{
         font-size: 0.8rem;
         line-height: 30px;
     }
+    .sidebar h3{
+        font-size: 0.8rem;
+    }
+    .sidebar .create-playlist p{
+        font-size: 0.8rem;
+    }
+    .sidebar .playlist-list li{
+        font-size: 0.8rem;
+    }
+    .install-app p{
+        font-size: 0.8rem;
+    }
     header{
         width: calc(100% - 200px);
     }
+    header button{
+        font-size: 0.5rem;
+        padding: 10px;
+    }
 }
 
+/* phone */
+
 @media screen and (max-width: 420px){
-    .sidebar{
+    .sidebar, .bottom-container{
         width: 50px;
     }
     .sidebar .logo img{
         margin: 0 auto;
     }
-    .sidebar .logo-big{
+    .sidebar .logo-big, .sidebar .nav-item p, .sidebar h3, .install-app p{
         display: none;
     }
     .sidebar .logo-small{
@@ -172,13 +308,24 @@ footer{
         display: flex;
         justify-content: center;
     }
-    .sidebar .nav-item p{
+    .playlist-container{
         display: none;
+    }
+    .bottom-container{
+        padding: 0;
+    }
+    .install-app{
+        width: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .install-app img{
+        margin: 0 auto;
     }
     header{
         width: calc(100% - 50px);
     }
     header button{
-        padding: 12px 10px;
+        padding: 10px 5px;
     }
 }
