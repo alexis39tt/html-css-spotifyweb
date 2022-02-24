@@ -459,9 +459,21 @@ footer{
         font-size: 0.5rem;
         padding: 10px;
     }
-    .song-icons i:hover{
-        color: white;
-        transition: color 0.2s;
+    .player .top-controls i{
+        padding: 0px 5px;
+    }
+    .player .bottom-controls{
+        width: 150px;
+        margin: 0 auto;
+    }
+    .player .progress-bar{
+        margin: 5px 2px;
+    }
+    .volume .progress-bar{
+        width: 15px;
+    }
+    .volume i{
+        padding: 0px 5px;
     }
 }
 
@@ -508,8 +520,31 @@ footer{
     }
     header{
         width: calc(100% - 50px);
+        height: 10%;
     }
     header button{
         padding: 10px 5px;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .song{
+        margin-top: 10px;
+    }
+    .song-info{
+        padding-right: 10px;
+    }
+    .song-icons{
+        display: flex;
+        flex-direction: column;
+    }
+    .song-icons i{
+        padding: 5px 0px;
+    }
+    .player .progress-bar{
+        width: 300px;
+    }
+    .volume .progress-bar{
+        width: 50px;
     }
 }
