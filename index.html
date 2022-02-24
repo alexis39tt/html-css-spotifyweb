@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
@@ -13,7 +14,7 @@
 </head>
 
 <body>
-    <header class="clearfix">
+    <header>
         <button>effettua l'upgrade</button>
     </header>
     <aside>
@@ -37,7 +38,7 @@
                 </div>
             </nav>
             <div class="playlist-container">
-                <h3>playlist</h3>
+                <h3>PLAYLIST</h3>
                 <div class="create-playlist">
                     <i class="fa-solid fa-plus"></i>
                     <p>Crea Playlist</p>
@@ -53,22 +54,148 @@
                         <li>Nome Playlist</li>
                     </ul>
                 </div>
-            </div>
-            <div class="bottom-container">
-                <div class="install-app">
-                    <img src="./assets/img/download.svg" alt="install app">
-                    <p>Installa app</p>
-                </div>
-                <hr>
-                <div class="account">
-                    <img src="./assets/img/profile.svg" alt="profile">
-                    <h3>John Doe</h3>
+                <div class="bottom-container">
+                    <div class="install-app">
+                        <img src="./assets/img/download.svg" alt="install app">
+                        <p>Installa app</p>
+                    </div>
+                    <hr>
+                    <div class="account">
+                        <img src="./assets/img/profile.svg" alt="profile">
+                        <h3>John Doe</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </aside>
     <main>
-        
+        <div class="navbar">
+            <nav aria-label="albums navigation">
+                <ul>
+                    <li class="selected">in evidenza</li>
+                    <li>podcast</li>
+                    <li>classifiche</li>
+                    <li>generi e mood</li>
+                    <li>nuove uscite</li>
+                    <li>scopri</li>
+                </ul>
+            </nav>
+        </div>
+        <section>
+            <h2>Recently played</h2>
+            <div class="album-container">
+                <div class="album">
+                    <div class="overlay">
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+                    <img src="./assets/img/metal_lifting.jpg" alt="album1">
+                    <div class="text">
+                        <h3>Heavy metal</h3>
+                        <p>Subtitle</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <div class="overlay">
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+                    <img src="./assets/img/stranger.jpeg" alt="album2">
+                    <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                    <p>Kyle Dixon & Michael Stein</p>
+                </div>
+                <div class="album">
+                    <div class="overlay">
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+                    <img src="./assets/img/aquietplace.jpeg" alt="album3">
+                    <h3>A quiet place</h3>
+                    <p>Subtitle</p>
+                </div>
+                <div class="album">
+                    <div class="overlay">
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+                    <img src="./assets/img/split.jpeg" alt="album4">
+                    <h3>Split</h3>
+                    <p>Subtitle</p>
+                </div>
+                <div class="album">
+                    <div class="overlay">
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+                    <img src="./assets/img/cure.jpeg" alt="album5">
+                    <h3>A cure for wellness</h3>
+                    <p>Subtitle</p>
+                </div>
+                <div class="album">
+                    <div class="overlay">
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+                    <img src="./assets/img/sinister.jpeg" alt="album6">
+                    <h3>Sinister</h3>
+                    <p>Subtitle</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Creato per John Doe</h2>
+            <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+            <div class="album-container">
+                <div class="album mix">
+                    <div class="overlay">
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+                    <img src="./assets/img/radar.jpeg" alt="album1">
+                    <h3>Release radar</h3>
+                </div>
+                <div class="album mix">
+                    <div class="overlay">
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+                    <img src="./assets/img/mixdaily.jpeg" alt="album2">
+                    <h3>Daily Mix 1</h3>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Artisti più popolari</h2>
+            <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+            <div class="album-container">
+                <div class="album artist">
+                    <div class="overlay">
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+                    <img src="./assets/img/youg.jpeg" alt="album1">
+                    <h3>Lana Del Rey</h3>
+                </div>
+                <div class="album artist">
+                    <div class="overlay">
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+                    <img src="./assets/img/einaudi.jpeg" alt="album2">
+                    <h3>Ludovico Einaudi</h3>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <section>
