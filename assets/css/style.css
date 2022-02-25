@@ -41,7 +41,7 @@ ul{
 
 .sidebar{
     width: 300px;
-    height: 100vh;
+    height: 160vh;
     background-color: black;
     overflow-y: auto;
     float: left;
@@ -141,7 +141,7 @@ ul{
     padding: 10px 20px;
     margin: 0;
     position: absolute;
-    bottom: 80px;
+    top: 140vh;
     left: 0;
     background-color: black;
 }
@@ -549,6 +549,12 @@ footer{
 /* tablet */
 
 @media screen and (max-width: 768px) {
+    .sidebar{
+        height: 350vh;
+    }
+    .bottom-container{
+        top: 303vh;
+    }
     .sidebar, .bottom-container{
         width: 200px;
     }
@@ -615,6 +621,12 @@ footer{
 /* phone */
 
 @media screen and (max-width: 420px){
+    .sidebar{
+        height: 580vh;
+    }
+    .bottom-container{
+        top: 300vh;
+    }
     .sidebar, .bottom-container{
         width: 50px;
     }
